@@ -1,6 +1,11 @@
+import os ,sys
+path=os.getcwd()
+sys.path.append(path)
+#print(path)
+#Run file from regression_model parent directory
+#print(sys.path)
 import numpy as np
 from sklearn.model_selection import train_test_split
-
 from regression_model import pipeline
 from regression_model.processing.data_management import (
     load_dataset, save_pipeline)
