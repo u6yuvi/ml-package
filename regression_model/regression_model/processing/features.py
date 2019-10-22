@@ -21,7 +21,7 @@ class LogTransformer(BaseEstimator, TransformerMixin):
         # check that the values are non-negative for log transform
         if not (X[self.variables] > 0).all().all():
             vars_ = self.variables[(X[self.variables] <= 0).any()]
-            raise ValueError(
+            raise InvalidModelInputError(
                 f"Variables contain zero or negative values, "
                 f"can't apply log for vars: {vars_}")
 
