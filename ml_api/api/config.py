@@ -3,7 +3,6 @@ from logging.handlers import TimedRotatingFileHandler
 import pathlib
 import os
 import sys
-print(pathlib.Path(__file__).resolve().parent.parent)
 PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 FORMATTER = logging.Formatter(
